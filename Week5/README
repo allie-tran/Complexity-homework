@@ -1,0 +1,12 @@
+Python Q1.py
+Optional variables:
+-n the decimal number (if not specified, a default value is used)
+
+Python Q2.py
+Optional variables:
+-n, -k, -a, -b for a test case
+2 plots should be shown. However, the running time is long.
+
+The report on how to archive the numbers of assignments and comparisons are shown in the console.
+
+
