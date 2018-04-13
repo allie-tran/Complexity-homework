@@ -10,6 +10,7 @@ parser.add_argument("-n", "--n", type=int, default=20, nargs='?', help="For one 
 parser.add_argument("-x", "--x", type=int, default=50, nargs='?')
 args = parser.parse_args()
 
+
 def binary_search(array, target):
 	if target < 0:
 		return -1
