@@ -1,0 +1,8 @@
+Python Q1.py
+Optional variables:
+-n the length of the array (default = 20)
+-x the sum of two elements (default = 50)
+
+The proof for correctness is shown in the console.
+
+
