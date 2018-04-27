@@ -1,8 +1,14 @@
 Python Q1.py
+
 Optional variables:
--n the length of the array (default = 20)
--x the sum of two elements (default = 50)
+-fn the function f (default = n^3 + n^2 + n + 1)
+-a the lower bound of n (default = 10)
+-b the upper bound of n (default = 1000)
 
-The proof for correctness is shown in the console.
+Python Q2.py
 
+Optional variables:
+-a , default 1234
+-b , default 4321
+-n the number of digits of a and b (preferable n is even)
 
