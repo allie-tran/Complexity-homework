@@ -32,13 +32,30 @@ for i in range(alpha + 1):
     Fn += ai * Symbol('n') ** i
 
 print(Fn)
+# Solve equations for a_k
 equations = []
+test_case = None
 for j, pair in enumerate(pairs):
     equations.append(Fn.subs('n', pair[0]) - pair[1])
-    if j >= alpha :
+    if j >= alpha:
         test_case = pairs[j + 1]
         break
+# If there are fewer instance of (n, f(n)) than the amount needed to solve for a_k, get more pairs
+if test_case is None:
+    more_data = alpha + 1 - len(pairs)
+    more_pairs = []
+    while len(more_pairs) < more_data:
+        b += 1
+        if fn.subs('n', b) > 0:
+            more_pairs.append((b, fn.subs('n', b)))
+    for j, pair in enumerate(more_pairs[:-1]):
+        equations.append(Fn.subs('n', pair[0]) - pair[1])
+
+    test_case = more_pairs[-1]
+
 results = solve(equations)
 Fn = Fn.subs(results)
-print(results)
-assert Fn.subs('n', test_case[0]) == test_case[1], 'fn doesn\'t have the form of O(n^alpha)'
+if Fn.subs('n', test_case[0]) == test_case[1]:
+    print(results)
+else:
+    print('fn doesn\'t have the form of O(n^alpha)')
