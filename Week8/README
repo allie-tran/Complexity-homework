@@ -1,0 +1,13 @@
+***Q1.py***
+Command-line example: python Q1.py -A 1 2 3 4 5 -x 2
+
+-A/--sorted_array: the input array
+-x/--x: the element
+
+***Q2.py***
+Command-line example: python Q2.py -S 1 2 3 4 5 -x 2
+
+-S/--set: the input set
+-k/--k: find the k-th smallest element in S
+
+
