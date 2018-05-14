@@ -65,5 +65,5 @@ if __name__ == "__main__":
 		data.append((t * 1e4, N, N*log(N)))
 
 	plot(data, 'Comparison between real times and different estimations')
-	print "The time complexity is O(n) on average."
+	print "The time complexity is estimated to be O(n) on average."
 

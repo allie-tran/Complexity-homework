@@ -9,7 +9,7 @@ args = parser.parse_args()
 def find(A, x):
 	left = 0
 	right = len(A) - 1
-	while left < right:
+	while left <= right:
 		mid = (left + right) // 2
 		if A[mid] == x:
 			return mid

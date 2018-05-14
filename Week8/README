@@ -5,9 +5,8 @@ Command-line example: python Q1.py -A 1 2 3 4 5 -x 2
 -x/--x: the element
 
 ***Q2.py***
-Command-line example: python Q2.py -S 1 2 3 4 5 -x 2
+Command-line example: python Q2.py
 
--S/--set: the input set
--k/--k: find the k-th smallest element in S
-
+Comparison between 2 methods is showed in Q2.png for N = 10, 11, ..., 1000.
+Run the code for N = 2^10, ..., 2^32 (Warning: the running time is expected to be very long).
 
