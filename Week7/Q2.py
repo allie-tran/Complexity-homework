@@ -166,6 +166,26 @@ def plot(data, name=''):
 	plt.show()
 
 
+def plot(data, name=''):
+
+	n = [t[0] for t in data]
+	n3 = [t[0] ** 3 for t in data]
+	nlog7 = [t[0] ** log(7, 2) for t in data]
+	time1 = [t[1] for t in data]
+	time2 = [t[2] for t in data]
+	fig, ax = plt.subplots()
+	l1a, = ax.plot(n, n3, label='n3')
+	l1b, = ax.plot(n, nlog7, label='nlog7')
+	l2, = ax.plot(n, time1, label='traditional')
+	l3, = ax.plot(n, time2, label='Strass')
+	ax.legend((l1a, l1b, l2, l3), ('n3', 'nlog7', 'traditional', 'Strass'))
+
+	ax.set_xlabel('n', color='0.5')
+	ax.set_ylabel('values', color='0.5')  # grayscale color
+	ax.set_title(name)
+	plt.show()
+
+
 if __name__ == "__main__":
     # Test case
     n = args.n
